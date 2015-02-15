@@ -287,8 +287,28 @@ ul.tags-list li .hash {
 	color: #DB6868;
 }
 
+#feed li .tag-holder .select-tags {
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #DDD;
+}
 
+#feed li .tag-holder .select-tags[disabled] {
+	background: none;
+}
 
+#feed li .tag-holder .select-tags.matched {
+	color: #76C06A;
+	-webkit-transition: color 0.7s ease-out;
+    transition: color 0.7s ease-out; 
+}
+
+#feed li .tag-holder .select-tags.mismatched {
+	color: #DB6868;
+	-webkit-transition: color 0.7s ease-out;
+    transition: color 0.7s ease-out; 
+}
 
 
 
