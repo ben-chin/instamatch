@@ -1,7 +1,7 @@
 # Instamatch
 **A simple in-browser game of matching hashtags to the correct picture in the Instagram popular feed**
 
-[Play it now!](https://instamatch-dev.herokuapp.com/)
+Play it now at [instamatch.benchin.co](http://instamatch.benchin.co)!
 
 ---
 
