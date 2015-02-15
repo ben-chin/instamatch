@@ -6,3 +6,4 @@ app/static/js/*
 app/static/css/*
 app/settings.cfg
 _SpecRunner.html
+.idea/*
