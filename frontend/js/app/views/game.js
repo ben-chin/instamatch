@@ -14,6 +14,7 @@ app.GameView = Backbone.View.extend({
 		this.addLoading();
 		
 		this.listenTo(this.model, 'sync', this.removeLoading);
+		this.listenTo(this.model, 'sync', this.populateMobileTags);
 		this.listenTo(this.model, 'endGame', this.endGame);
 	},
 
@@ -90,6 +91,11 @@ app.GameView = Backbone.View.extend({
 				.prepend(this.messageTemplate(message))
 				.find('.overlay').hide().fadeIn('slow');
 		}.bind(this), 2500);
+	},
+
+	populateMobileTags: function () {
+		this.model.get('feed')
+			.trigger('populateMobileTags', this.model.get('tags').models);
 	}
 
 });
