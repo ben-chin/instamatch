@@ -1,0 +1,8 @@
+.DS_Store
+*.pyc
+.grunt/
+node_modules/
+app/static/js/*
+app/static/css/*
+app/settings.cfg
+_SpecRunner.html

@@ -1,0 +1,41 @@
+@-webkit-keyframes flash {
+	0% { background-color: #83DF8F; } 
+	20% { background-color: #DB6868; } 
+	60% { background-color: #83DF8F; } 
+	80% { background-color: #DB6868; } 
+	100% { background-color: #83DF8F; }
+}
+
+@keyframes flash {
+	0% { background-color: #83DF8F; } 
+	20% { background-color: #DB6868; } 
+	60% { background-color: #83DF8F; } 
+	80% { background-color: #DB6868; } 
+	100% { background-color: #83DF8F; }
+}
+
+@-webkit-keyframes flashSuccess {
+	0% { background-color: #83DF8F; } 
+	20% { background-color: #F7C374; } 
+	60% { background-color: #83DF8F; } 
+	80% { background-color: #F7C374; } 
+	100% { background-color: #83DF8F; }
+}
+
+@keyframes flashSuccess {
+	0% { background-color: #83DF8F; } 
+	20% { background-color: #F7C374; } 
+	60% { background-color: #83DF8F; } 
+	80% { background-color: #F7C374; } 
+	100% { background-color: #83DF8F; }
+}
+
+@-webkit-keyframes fadeOut {
+	0% { opacity: 1; } 
+	100% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+	0% { opacity: 1; } 
+	100% { opacity: 0; }
+}

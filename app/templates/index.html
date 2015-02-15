@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Instamatch - How #instagood is your hipster?{% endblock %}
+
+{% block css %}
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700|Six+Caps' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/static/css/lib.min.css" />
+	<link rel="stylesheet" href="/static/css/style.min.css" />
+{% endblock %}
+
+{% block content %}
+
+	<header>
+		<div class="container">
+
+			<div class="col-sm-9">
+				<div class="banner row">
+					<div class="logo col-sm-3 col-xs-6">
+						<h1>Instamatch</h1>
+					</div>
+					<div class="slogan col-sm-6 hidden-xs">
+						<h3>How #instagood is your hipster?<br/>Guess the #hashtags! </h3>
+					</div>
+					<div id="game-stats" class="col-sm-3 col-xs-6">
+						<script type="text/template" id="stats-template">
+							<div class="row">
+								<div class="lives col-xs-12">
+									<span class="stat pull-left">
+										<strong>Lives</strong>
+									</span>
+									<span class="value pull-right">
+										<%= lives %>
+									</span>
+								</div>
+								<div class="points col-xs-12">
+									<span class="stat pull-left">
+										<strong>Points</strong>
+									</span>
+									<span class="value pull-right">
+										<%= num_matches %>
+									</span>
+								</div>
+							</div>
+						</script>
+					</div>
+				</div>
+			</div>
+
+			<div class="hashtag-info col-sm-3 hidden-xs">
+				<header>
+					<h3>Hashtags</h3>
+					<p>Drag the hashtag to the correct picture!</p>
+				</header>	
+			</div>
+
+		</div>
+	</header>
+
+	<div id="content" class="container">
+
+		<div class="main col-sm-9">
+			<script type="text/template" id="message-template">
+				<div class="overlay">
+					<div class="overlay-inner">
+						<div class="overlay-content">
+							<h1><%= heading %></h1>
+							<h3><%= subheading %></h3>
+							<button id="reset-game" class="btn btn-primary"><%= resetText %></button>
+						</div>
+					</div>
+				</div>
+			</script>
+
+			<ul id="feed" class="row">
+				<script type="text/template" id="pic-template">
+					<img src="<%= image %>" class="pic" />
+					<div class="tag-holder"><span>#?</span></div>
+				 </script>
+			</ul>
+		</div>
+
+		<div class="sidebar col-sm-3">	
+			<ul class="tags-list">
+				<script type="text/template" id="tag-template">
+					<span class="hash">#</span><span><%= name %></span>
+				</script>
+			</ul>
+		</div>
+		
+	</div>
+
+{% endblock %}
+
+
+{% block js %}
+	<script type="text/javascript" src="/static/js/app.min.js"></script>
+{% endblock %}
