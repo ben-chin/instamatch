@@ -1,10 +1,10 @@
-from random import randrange
+from random import choice
 
 
 # Pull a random hashtag from an image's hastag
 # list, and return it as a dictionary
 def pick_random_tag(tags):
-    tag = tags[randrange(0, len(tags))]
+    tag = choice(tags)
     return tag.__dict__
 
 

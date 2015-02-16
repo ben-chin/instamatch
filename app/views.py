@@ -24,11 +24,10 @@ def game_feed():
     images = api.media_popular(count=30)
 
     # Build feed from result of API call
-    for img in images:
-        if is_valid_item(img):
-            item = extract_feed_item(img)
-            tags.append(pick_random_tag(img.tags))
-            result.append(item)
+    for img in filter(is_valid_item, images):
+        item = extract_feed_item(img)
+        tags.append(pick_random_tag(img.tags))
+        result.append(item)
 
     response = {
         'images': result,
